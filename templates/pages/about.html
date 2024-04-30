@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About me{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <h1>About me</h1>
+    <pre>
+        My name is Fernanda Ugalde, I'm 21 years old, I'm from Mexico.
+        I'm a student of the Software Engineering career.
+        I love to learn new things, code, dance and ply with my pets.
+    </pre>
+    <div class="img">
+        <img src="{% static 'img/puppy.jpg' %}" alt="">
+    </div>
+</div>
+{% endblock content %}
