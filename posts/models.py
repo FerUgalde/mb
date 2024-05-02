@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class Post(models.Model):                       # inheritance (herencia)
@@ -9,3 +10,8 @@ class Post(models.Model):                       # inheritance (herencia)
 
     def __str__(self):
         return self.title
+    
+    def get_absolute_url(self):
+        return reverse("detail", args=[self.id])
+        #return reverse("list")
+    
